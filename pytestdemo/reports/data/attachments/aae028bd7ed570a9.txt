@@ -1,0 +1,13 @@
+INFO     logger:python_logging.py:83 沈懿天天基金登录成功用例接口测试开始！！
+INFO     logger:python_logging.py:83 请求方式为POST
+INFO     logger:python_logging.py:83 完整的请求url为  https://tradeapineice.1234567.com.cn/User/home/LoginCheckForMobile
+INFO     logger:python_logging.py:83 剩余请求参数为  {'data': {'CToken': 'asZckQW-oDnu-CBnMJLOXwQK90_fISMhkTfO6IV_CTq9dgyGzD1wqr7SDDXX8tq7wjPL6LGN3SNXJvEGgezydpgwnC9jAAbNTj58dzigjZ3c5S1T_BO3io1U6jUvjGFUb6279Id-4nINykBkNNFhOxwn_X7219twExj6kXN5AMQNt4s9nP9yitOHT-vBFXzHNuk1oBZLNEbYnr_1T5YaR-khAMgZI0Hbn-oWcR9oukY.1', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': 'ef73781effc5774100f87fe2f437a435', 'Account': '13166007617'}}
+INFO     logger:python_logging.py:83 沈懿天天基金登录成功用例接口的响应结果为{"Data":{"CToken":null,"UToken":null,"TradeApiBaseAddress":"https://tradeapineice15.1234567.com.cn","TradeApiBaseAddressBackup":"https://tradeapineice15.1234567.com.cn","CustomerNo":null,"CustomerName":null,"ErrorTimes":3,"AccLoginTimes":0,"CertificateType":null,"CertificateNo":null,"LastLoginTime":null,"MobilePhone":null,"Md5MobilePhone":null,"Tips":null,"Zone":15,"NeedVerifyCodeNext":false,"DepositAccountNo":null,"HsCustomerNo":null,"IdEndDate":null,"Risk":null,"RiskName":null,"PassportID":null,"OldPassportID":null,"IsBindingPassport":false,"OpenID":null,"NeedVerifyDevice":false,"IsMobileBound":false,"IsVisitor":false,"VipLevel":0,"PayPreferences":null,"NewDevice":false,"DefectTip":null},"ErrorCode":-1,"InnerErrorCode":"1059","ErrorMessage":["网络不给力，请稍后重试"],"FirstError":"网络不给力，请稍后重试","Message":null,"DebugError":null,"Success":false,"NotCache":false,"HasWrongToken":false}
+INFO     logger:python_logging.py:83 沈懿天天基金登录成功用例接口测试结束！！+
+
+INFO     logger:python_logging.py:83 天天基金用户奖励接口测试开始！！
+INFO     logger:python_logging.py:83 请求方式为GET
+INFO     logger:python_logging.py:83 完整的请求url为  https://actsl-test.1234567.com.cn/market/annualstatementapi/commonactive/getUserRewards
+INFO     logger:python_logging.py:83 剩余请求参数为  {'params': {'ctoken': 'None', 'utoken': 'None', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': 'None', 'userid': 'None', 'pageIndex': 1, 'pageNum': 100}}
+INFO     logger:python_logging.py:83 天天基金用户奖励接口的响应结果为{"Data":null,"ErrCode":109,"Message":"登录已过期,请重新登录","Succeed":false,"TotalCount":0,"Expansion":"427174b5fff64928881b3181cd61cc5d"}
+INFO     logger:python_logging.py:83 天天基金用户奖励接口测试结束！！+

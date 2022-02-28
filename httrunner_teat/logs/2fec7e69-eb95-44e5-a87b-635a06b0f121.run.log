@@ -1,0 +1,66 @@
+2021-10-19 14:21:56.437 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: testcase description, TestCase ID: 2fec7e69-eb95-44e5-a87b-635a06b0f121
+2021-10-19 14:21:56.440 | INFO     | httprunner.runner:__run_step:292 - run step begin: /cgi-bin/token >>>>>>
+2021-10-19 14:21:56.619 | DEBUG    | httprunner.client:request:186 - client IP: 172.31.41.34, Port: 61925
+2021-10-19 14:21:56.622 | DEBUG    | httprunner.client:request:194 - server IP: 101.226.212.27, Port: 443
+2021-10-19 14:21:56.626 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://api.weixin.qq.com/cgi-bin/token?appid=wx74a8627810cfa308&grant_type=client_credential&secret=e40a02f9d79a8097df497e6aaf93ab80
+headers  : {
+    "User-Agent": "PostmanRuntime/7.28.0",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Cache-Control": "no-cache",
+    "Host": "api.weixin.qq.com",
+    "Postman-Token": "50f8bb1a-7826-49f8-835e-ec889063b7cc",
+    "HRUN-Request-ID": "HRUN-2fec7e69-eb95-44e5-a87b-635a06b0f121-516441"
+}
+cookies  : {}
+body     : None
+
+2021-10-19 14:21:56.631 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Connection": "keep-alive",
+    "Content-Type": "application/json; encoding=utf-8",
+    "Date": "Tue, 19 Oct 2021 06:21:56 GMT",
+    "Content-Length": "194"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json; encoding=utf-8
+body     : {
+    "access_token": "50_q_qbuyjy8dXljXP7u1fqIX5y1Vm6da8F5N52IkxSCUCOOr9UgwcLbsXJpx-nH9QaQYdsNtWGc9fd4m9UTYlTxREHd7Rr4a_nYb4w_GfR0d7qXjDCzmF3KY9eJaKvm5tn4xwg_eV9l_qNL0ExNLJdAFAIGE",
+    "expires_in": 7200
+}
+
+2021-10-19 14:21:56.633 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 177.88 ms, response_length: 0 bytes
+2021-10-19 14:21:56.636 | INFO     | httprunner.response:validate:249 - assert status_code equal 200(int)	==> pass
+2021-10-19 14:21:56.638 | INFO     | httprunner.response:validate:249 - assert headers."Content-Type" equal application/json; encoding=utf-8(str)	==> pass
+2021-10-19 14:21:56.639 | ERROR    | httprunner.response:validate:266 - assert body.access_token equal 45_zo0cI1hRQhNoUKfLxsDAyCw0ozZZB_lc7Gy62bj1H9uRnLlXshYqH_g5FBuWC3VlmNk8enL-hCsbN3qumyyg1mRTjRtuiriApZd6ZKeDxu0oikKn4yF4PgUautvgfciX5O07iIxsWJj7CCVTPQCfAEAZAM(str)	==> fail
+check_item: body.access_token
+check_value: 50_q_qbuyjy8dXljXP7u1fqIX5y1Vm6da8F5N52IkxSCUCOOr9UgwcLbsXJpx-nH9QaQYdsNtWGc9fd4m9UTYlTxREHd7Rr4a_nYb4w_GfR0d7qXjDCzmF3KY9eJaKvm5tn4xwg_eV9l_qNL0ExNLJdAFAIGE(str)
+assert_method: equal
+expect_value: 45_zo0cI1hRQhNoUKfLxsDAyCw0ozZZB_lc7Gy62bj1H9uRnLlXshYqH_g5FBuWC3VlmNk8enL-hCsbN3qumyyg1mRTjRtuiriApZd6ZKeDxu0oikKn4yF4PgUautvgfciX5O07iIxsWJj7CCVTPQCfAEAZAM(str)
+2021-10-19 14:21:56.643 | INFO     | httprunner.response:validate:249 - assert body.expires_in equal 7200(int)	==> pass
+2021-10-19 14:21:56.644 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: https://api.weixin.qq.com/cgi-bin/token
+method: GET
+headers: {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate, br', 'Cache-Control': 'no-cache', 'Connection': 'keep-alive', 'Host': 'api.weixin.qq.com', 'Postman-Token': '50f8bb1a-7826-49f8-835e-ec889063b7cc', 'User-Agent': 'PostmanRuntime/7.28.0', 'HRUN-Request-ID': 'HRUN-2fec7e69-eb95-44e5-a87b-635a06b0f121-516441'}
+params: {'appid': 'wx74a8627810cfa308', 'grant_type': 'client_credential', 'secret': 'e40a02f9d79a8097df497e6aaf93ab80'}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: None
+
+====== response details ======
+status_code: 200
+headers: {'Connection': 'keep-alive', 'Content-Type': 'application/json; encoding=utf-8', 'Date': 'Tue, 19 Oct 2021 06:21:56 GMT', 'Content-Length': '194'}
+body: '{"access_token":"50_q_qbuyjy8dXljXP7u1fqIX5y1Vm6da8F5N52IkxSCUCOOr9UgwcLbsXJpx-nH9QaQYdsNtWGc9fd4m9UTYlTxREHd7Rr4a_nYb4w_GfR0d7qXjDCzmF3KY9eJaKvm5tn4xwg_eV9l_qNL0ExNLJdAFAIGE","expires_in":7200}'
+

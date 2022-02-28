@@ -1,0 +1,59 @@
+#天天基金用户参与活动
+- name: 天天基金用户参与活动---拆神秘福袋
+  request:
+    headers:
+      Cookie: st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561
+    data:
+      ctoken: ${get_extra_data(CToken)}
+      utoken: ${get_extra_data(UToken)}
+      deviceid: "87C7E8F1-4A80-4045-B0DD-443176FFA5D3"
+      taskid: T1_20211210045104
+      activeid: A20211210163821
+      passportid: ${get_extra_data(PassportID)}
+      userid: ${get_extra_data(CustomerNo)}
+    method: POST
+    url: /attendActive
+  validate:
+    - eq: { status_code: 200 }
+    - eq: { ErrCode: 117 }
+#    - contain:
+#        - Data
+
+#天天基金用户参与活动
+- name: 天天基金用户参与活动---拆福袋
+  request:
+    headers:
+      Cookie: st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561
+    data:
+      ctoken: ${get_extra_data(CToken)}
+      utoken: ${get_extra_data(UToken)}
+      deviceid: "87C7E8F1-4A80-4045-B0DD-443176FFA5D3"
+      taskid: T6_20211210045536
+      activeid: A20211210163821
+      passportid: ${get_extra_data(PassportID)}
+      userid: ${get_extra_data(CustomerNo)}
+    method: POST
+    url: /attendActive
+  validate:
+    - eq: { status_code: 200 }
+    - eq: { ErrCode: 0 }
+
+#天天基金用户参与活动
+- name: 天天基金用户奖励
+  request:
+    headers:
+      Cookie: st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561
+    params:
+      ctoken: ${get_extra_data(CToken)}
+      utoken: ${get_extra_data(UToken)}
+      deviceid: "87C7E8F1-4A80-4045-B0DD-443176FFA5D3"
+      activeid: A20211210163821
+      passportid: ${get_extra_data(PassportID)}
+      userid: ${get_extra_data(CustomerNo)}
+      pageIndex: 1
+      pageNum: 100
+    method: GET
+    url: /getUserRewards
+  validate:
+    - eq: { status_code: 200 }
+    - eq: { ErrCode: 0 }

@@ -1,0 +1,34 @@
+config:
+    name: testcase description
+    variables: {}
+    verify: false
+teststeps:
+-   name: /cgi-bin/token
+    request:
+        headers:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Cache-Control: no-cache
+            Connection: keep-alive
+            Host: api.weixin.qq.com
+            Postman-Token: 50f8bb1a-7826-49f8-835e-ec889063b7cc
+            User-Agent: PostmanRuntime/7.28.0
+        method: GET
+        params:
+            appid: wx74a8627810cfa308
+            grant_type: client_credential
+            secret: e40a02f9d79a8097df497e6aaf93ab80
+        url: https://api.weixin.qq.com/cgi-bin/token
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; encoding=utf-8
+    -   eq:
+        - body.access_token
+        - 45_zo0cI1hRQhNoUKfLxsDAyCw0ozZZB_lc7Gy62bj1H9uRnLlXshYqH_g5FBuWC3VlmNk8enL-hCsbN3qumyyg1mRTjRtuiriApZd6ZKeDxu0oikKn4yF4PgUautvgfciX5O07iIxsWJj7CCVTPQCfAEAZAM
+    -   eq:
+        - body.expires_in
+        - 7200

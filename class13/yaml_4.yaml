@@ -1,0 +1,8 @@
+- sucesslogin:
+    username: xingyao
+    passwd: 123456
+- errorlogin:
+    - username: xingyao
+      passwd: 123456
+    - username: baili
+      passwd: 1111111

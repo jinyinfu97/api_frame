@@ -1,0 +1,16 @@
+#创建标签
+-   name: 创建标签
+    request:
+        json:
+            tag:
+                name: "苏州${get_random_num(1000,2000)}"
+        method: POST
+        params:
+            access_token: ${get_extra_data(access_token)}
+        url: /tags/create
+    extract:
+        id: $..id
+    validate:
+    -   eq: {status_code: 200}
+    -   contain:
+        - tag

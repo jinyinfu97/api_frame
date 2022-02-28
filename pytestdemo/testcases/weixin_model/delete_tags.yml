@@ -1,0 +1,8 @@
+#删除标签
+-   name: "删除所有标签"
+    request:
+        url: /tags/delete?access_token=${get_extra_data(access_token)}
+        method: post
+        json: {"tag": {"id":"${get_extra_data(id)}"}}
+    validate:
+    -   eq: {status_code: 200}

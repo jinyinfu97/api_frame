@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/class13/modules.yaml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/class14/log.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/pytestdemo/data/cscs111.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/pytestdemo/data/fund_login.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/pytestdemo/data/token_wx.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/pytestdemo/pytest.ini" charset="GBK" />
+  </component>
+</project>

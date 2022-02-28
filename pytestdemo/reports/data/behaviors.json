@@ -1,0 +1,408 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "test_get_ctoken[caseinfo0]",
+    "uid" : "feea9bc81a645d62",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1644892417126,
+      "stop" : 1644892417225,
+      "duration" : 99
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '天天基金获取CUtoken', 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': 'h-1chre-udknkf6nnk--q6e8huhfuerh.1', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'DeviceName': 'Xin的iPhone', 'DeviceOS': 'iOS 15.2.1', 'DeviceType': 'iPhone13,2', 'Version': '6.5.0', 'ServerVersion': '6.5.0', 'appVersion': '6.5.0'}, 'method': 'POST', 'url': '/GetCToken'}, 'extract': {'Data': '$.Data'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrorCode': 0}}, {'contain': ['Data']}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo10-caseinfo20]",
+    "uid" : "d9a83628cc611e4d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892417225,
+      "stop" : 1644892417506,
+      "duration" : 281
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '张启娣天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(zqd1234qwer)}', 'Account': '15618392885'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True|HasWrongToken=False|ErrorCode=0)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}, 'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'method': 'POST', 'url': '/attendActive'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo10-caseinfo21]",
+    "uid" : "5c521d833c1b3469",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892417584,
+      "stop" : 1644892417812,
+      "duration" : 228
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '张启娣天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(zqd1234qwer)}', 'Account': '15618392885'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True|HasWrongToken=False|ErrorCode=0)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}, 'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'method': 'POST', 'url': '/attendActive'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo10-caseinfo22]",
+    "uid" : "54dfbf9bdaed13c1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1644892417828,
+      "stop" : 1644892418096,
+      "duration" : 268
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '张启娣天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(zqd1234qwer)}', 'Account': '15618392885'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True|HasWrongToken=False|ErrorCode=0)'}]}", "{'name': '天天基金用户奖励', 'request': {'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}, 'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'method': 'GET', 'url': '/getUserRewards'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo11-caseinfo20]",
+    "uid" : "e5c15d3b2bca7ed6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892418096,
+      "stop" : 1644892418399,
+      "duration" : 303
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '陈世群天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(csq1234qwer)}', 'Account': '15800620646'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo11-caseinfo21]",
+    "uid" : "5d5c21792b07f2db",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892418415,
+      "stop" : 1644892418618,
+      "duration" : 203
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '陈世群天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(csq1234qwer)}', 'Account': '15800620646'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo11-caseinfo22]",
+    "uid" : "d46f89675dce47f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1644892418633,
+      "stop" : 1644892418875,
+      "duration" : 242
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '陈世群天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(csq1234qwer)}', 'Account': '15800620646'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo12-caseinfo20]",
+    "uid" : "6847d5d4c0d204bc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892418875,
+      "stop" : 1644892419113,
+      "duration" : 238
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '沈懿天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(1234abcd)}', 'Account': '13166007617'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=False)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo12-caseinfo21]",
+    "uid" : "cd610a1efc91380a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892419129,
+      "stop" : 1644892419292,
+      "duration" : 163
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '沈懿天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(1234abcd)}', 'Account': '13166007617'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=False)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo12-caseinfo22]",
+    "uid" : "d61287048cea8a4b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892419307,
+      "stop" : 1644892419479,
+      "duration" : 172
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '沈懿天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(1234abcd)}', 'Account': '13166007617'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=False)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo13-caseinfo20]",
+    "uid" : "3b336461c8be74d1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892419479,
+      "stop" : 1644892419831,
+      "duration" : 352
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '车亚梅天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(cym1234qwer)}', 'Account': '18817391802'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo13-caseinfo21]",
+    "uid" : "db28a10f47fa57af",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892419847,
+      "stop" : 1644892420083,
+      "duration" : 236
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '车亚梅天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(cym1234qwer)}', 'Account': '18817391802'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo13-caseinfo22]",
+    "uid" : "3ad69e7259f1bd98",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1644892420098,
+      "stop" : 1644892420354,
+      "duration" : 256
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '车亚梅天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(cym1234qwer)}', 'Account': '18817391802'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo14-caseinfo20]",
+    "uid" : "8fe966a3bcfd545f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892420354,
+      "stop" : 1644892420619,
+      "duration" : 265
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '刘金星天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(ljx1234qwer)}', 'Account': '13636579642'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo14-caseinfo21]",
+    "uid" : "8734b5dc767cc546",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892420635,
+      "stop" : 1644892420860,
+      "duration" : 225
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '刘金星天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(ljx1234qwer)}', 'Account': '13636579642'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo14-caseinfo22]",
+    "uid" : "57bc0539f50d57b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1644892420875,
+      "stop" : 1644892421131,
+      "duration" : 256
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '刘金星天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(ljx1234qwer)}', 'Account': '13636579642'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo15-caseinfo20]",
+    "uid" : "d6ae8e0977c9997f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892421131,
+      "stop" : 1644892421387,
+      "duration" : 256
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '赵田田天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(ztt1234qwer)}', 'Account': '13761487066'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo15-caseinfo21]",
+    "uid" : "347c34ec1294594e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892421402,
+      "stop" : 1644892421637,
+      "duration" : 235
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '赵田田天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(ztt1234qwer)}', 'Account': '13761487066'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo15-caseinfo22]",
+    "uid" : "c0ffeffb557fd7cd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1644892421652,
+      "stop" : 1644892421924,
+      "duration" : 272
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '赵田田天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(ztt1234qwer)}', 'Account': '13761487066'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo16-caseinfo20]",
+    "uid" : "5c0af9b75a1499a4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892421924,
+      "stop" : 1644892422211,
+      "duration" : 287
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '李飞天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(lf1234qwer)}', 'Account': '13621960845'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo16-caseinfo21]",
+    "uid" : "3b7dd782f9e5e1f4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892422227,
+      "stop" : 1644892422461,
+      "duration" : 234
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '李飞天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(lf1234qwer)}', 'Account': '13621960845'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo16-caseinfo22]",
+    "uid" : "15b8356e8698287b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1644892422477,
+      "stop" : 1644892422753,
+      "duration" : 276
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '李飞天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(lf1234qwer)}', 'Account': '13621960845'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo17-caseinfo20]",
+    "uid" : "e77b98b837b0df60",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892422753,
+      "stop" : 1644892423485,
+      "duration" : 732
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '陈彦彬天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(1234qwer)}', 'Account': '13816580372'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo17-caseinfo21]",
+    "uid" : "acd3c05e0dfe51f8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892423501,
+      "stop" : 1644892423759,
+      "duration" : 258
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '陈彦彬天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(1234qwer)}', 'Account': '13816580372'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo17-caseinfo22]",
+    "uid" : "7341558eaede75b8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1644892423790,
+      "stop" : 1644892424149,
+      "duration" : 359
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '陈彦彬天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(1234qwer)}', 'Account': '13816580372'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo18-caseinfo20]",
+    "uid" : "e992a72a78c7a46a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892424149,
+      "stop" : 1644892424421,
+      "duration" : 272
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '金鑫天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(jx1234qwer)}', 'Account': '18017216062'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo18-caseinfo21]",
+    "uid" : "c456a9a1761daf6a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892424437,
+      "stop" : 1644892424710,
+      "duration" : 273
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '金鑫天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(jx1234qwer)}', 'Account': '18017216062'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo18-caseinfo22]",
+    "uid" : "603397941d40014b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1644892424725,
+      "stop" : 1644892425044,
+      "duration" : 319
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '金鑫天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(jx1234qwer)}', 'Account': '18017216062'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo19-caseinfo20]",
+    "uid" : "edbd336fc3efeb14",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892425044,
+      "stop" : 1644892425169,
+      "duration" : 125
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '马龙飞天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(mlf1234qwer)}', 'Account': '18717789585'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆神秘福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T1_20211210045104', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 117}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo19-caseinfo21]",
+    "uid" : "6ffa366f2d91b953",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892425196,
+      "stop" : 1644892425316,
+      "duration" : 120
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '马龙飞天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(mlf1234qwer)}', 'Account': '18717789585'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'url': '/attendActive', 'method': 'POST', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  }, {
+    "name" : "test_attend_activity[caseinfo19-caseinfo22]",
+    "uid" : "a93578612638bb1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1644892425332,
+      "stop" : 1644892425457,
+      "duration" : 125
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "{'name': '马龙飞天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(mlf1234qwer)}', 'Account': '18717789585'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+  } ]
+}

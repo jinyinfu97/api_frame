@@ -1,0 +1,12 @@
+#DDT(data driver test)数据驱动YAML文件,对应的YAML测试用例文件为:pm_get_token.yaml
+- ['name','Account','Password','assert_str1','assert_str2']
+- ['张启娣天天基金登录成功用例','15618392885','${md5(zqd1234qwer)}']
+- ['陈世群天天基金登录成功用例','15800620646','edcf840b13ca9bbcecf7dec6fdc4d5c4']
+- ['沈懿天天基金登录成功用例','13636301927','ef73781effc5774100f87fe2f437a435']
+- ['车亚梅天天基金登录成功用例','18817391802','${md5(cym1234qwer)}']
+- ['刘金星天天基金登录成功用例','13636579642','${md5(ljx1234qwer)}',[UToken,CToken],{Success: true},'CToken_L','UToken_Z','CustomerNo_Z','CustomerName_Z','PassportID_Z']
+#- ['赵田田天天基金登录成功用例','13761487066','${md5(ztt1234qwer)}',[UToken,CToken],{Success: true},'CToken_ZTT','UToken_Z','CustomerNo_Z','CustomerName_Z','PassportID_Z']
+#- ['李飞天天基金登录成功用例','13621960845','${md5(lf1234qwer)}',[UToken,CToken],{Success: true},'CToken_LF','UToken_Z','CustomerNo_Z','CustomerName_Z','PassportID_Z']
+#- ['陈彦彬天天基金登录成功用例','13816580372','${md5(1234qwer)}',[UToken,CToken],{Success: true},'CToken_CYB','UToken_Z','CustomerNo_Z','CustomerName_Z','PassportID_Z']
+#- ['金鑫天天基金登录成功用例','18017216062','${md5(jx1234qwer)}',[UToken,CToken],{Success: true},'CToken_JX','UToken_Z','CustomerNo_Z','CustomerName_Z','PassportID_Z']
+#- ['马龙飞天天基金登录成功用例','13917975804','${md5(mlf1234qwer)}',[UToken,CToken],{Success: true},'CToken_MLF','UToken_Z','CustomerNo_Z','CustomerName_Z','PassportID_Z']

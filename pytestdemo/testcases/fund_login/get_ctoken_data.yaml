@@ -1,0 +1,26 @@
+#天天基金获取CUtoken
+-   name: 天天基金获取CUtoken
+    request:
+      headers:
+        Host: tradeapineice.1234567.com.cn
+        Accept: "*/*"
+      data:
+        CToken: "h-1chre-udknkf6nnk--q6e8huhfuerh.1"
+        MobileKey: "87C7E8F1-4A80-4045-B0DD-443176FFA5D3"
+        GTOKEN: "A641CBFE4352465485D0447C8D51AFe3"
+        DeviceName: "Xin的iPhone"
+        DeviceOS: "iOS 15.2.1"
+        DeviceType: "iPhone13,2"
+        Version: "6.5.0"
+        ServerVersion: "6.5.0"
+        appVersion: "6.5.0"
+      method: POST
+      url: /GetCToken
+    extract:
+      Data: $.Data
+    validate:
+    - eq: {status_code: 200}
+    - eq: {ErrorCode: 0}
+    - contain:
+        - Data
+

@@ -1,0 +1,8 @@
+#- url: https://actsl-test.1234567.com.cn/market/leadinvestorapi/commonactive
+#- url: https://tradeapineice.1234567.com.cn/User/home
+#- url: https://api.weixin.qq.com/cgi-bin
+base:
+  base_wxgl_url: https://api.weixin.qq.com/cgi-bin
+  base_yhgl_url: http://47.107.116.139
+  base_activity_url: https://actsl-test.1234567.com.cn/market/annualstatementapi/commonactive
+  base_login_url: https://tradeapineice.1234567.com.cn/User/home

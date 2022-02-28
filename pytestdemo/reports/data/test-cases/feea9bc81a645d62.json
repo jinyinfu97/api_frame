@@ -1,0 +1,90 @@
+{
+  "uid" : "feea9bc81a645d62",
+  "name" : "test_get_ctoken[caseinfo0]",
+  "fullName" : "testcases.fund_login.test_login.TestFundLogin#test_get_ctoken",
+  "historyId" : "f30aeeef01208a929664e26f8deb3694",
+  "time" : {
+    "start" : 1644892417126,
+    "stop" : 1644892417225,
+    "duration" : 99
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clean_all_data",
+    "time" : {
+      "start" : 1644892417126,
+      "stop" : 1644892417126,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "9de9a7aa7f139952",
+      "name" : "log",
+      "source" : "9de9a7aa7f139952.txt",
+      "type" : "text/plain",
+      "size" : 1676
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcases.fund_login"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFundLogin"
+  }, {
+    "name" : "host",
+    "value" : "EM-20210524TVTX"
+  }, {
+    "name" : "thread",
+    "value" : "34092-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.fund_login.test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "caseinfo",
+    "value" : "{'name': '天天基金获取CUtoken', 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': 'h-1chre-udknkf6nnk--q6e8huhfuerh.1', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'DeviceName': 'Xin的iPhone', 'DeviceOS': 'iOS 15.2.1', 'DeviceType': 'iPhone13,2', 'Version': '6.5.0', 'ServerVersion': '6.5.0', 'appVersion': '6.5.0'}, 'method': 'POST', 'url': '/GetCToken'}, 'extract': {'Data': '$.Data'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrorCode': 0}}, {'contain': ['Data']}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "feea9bc81a645d62.json",
+  "parameterValues" : [ "{'name': '天天基金获取CUtoken', 'request': {'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}, 'data': {'CToken': 'h-1chre-udknkf6nnk--q6e8huhfuerh.1', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'DeviceName': 'Xin的iPhone', 'DeviceOS': 'iOS 15.2.1', 'DeviceType': 'iPhone13,2', 'Version': '6.5.0', 'ServerVersion': '6.5.0', 'appVersion': '6.5.0'}, 'method': 'POST', 'url': '/GetCToken'}, 'extract': {'Data': '$.Data'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrorCode': 0}}, {'contain': ['Data']}]}" ]
+}

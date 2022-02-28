@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "b3d03de9e264c124a39e417cb3cf6fe9",
+    "name" : "testcases.fund_login",
+    "statistic" : {
+      "failed" : 22,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 9,
+      "unknown" : 0,
+      "total" : 31
+    }
+  } ]
+}

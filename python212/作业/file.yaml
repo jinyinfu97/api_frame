@@ -1,0 +1,20 @@
+- userinfo:
+    name: jinixn
+    password: 123456
+- city:
+  - 北京
+  - 上海
+  - 广东
+- 123
+- 金鑫
+-
+  - a
+  - b
+  - c
+- id: 123
+- lg:
+  - 中文
+  - 英文
+  - 法文
+- method: get
+

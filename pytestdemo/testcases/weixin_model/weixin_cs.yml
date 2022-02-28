@@ -1,0 +1,21 @@
+#获取access_token
+-
+  name: $ddt{name}
+  parameterize:
+    name-appid-secret-grant_type-assert_str: /data/get_token_data.yaml
+  request:
+    method: get
+    url: /token
+    params:
+      appid: $ddt{appid}
+      secret: $ddt{secret}
+      grant_type: $ddt{grant_type}
+  extract:
+    access_token: $.access_token
+    expires_in: '"expires_in":(.*?)}'
+  validate:
+    - eq: {status_code: 200}
+    - contain:
+      - $ddt{assert_str}
+
+

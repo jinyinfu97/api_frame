@@ -1,0 +1,93 @@
+{
+  "uid" : "57bc0539f50d57b",
+  "name" : "test_attend_activity[caseinfo14-caseinfo22]",
+  "fullName" : "testcases.fund_login.test_login.TestFundLogin#test_attend_activity",
+  "historyId" : "7afd50de0d24780678f680c8b2e1ea5f",
+  "time" : {
+    "start" : 1644892420875,
+    "stop" : 1644892421131,
+    "duration" : 256
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clean_all_data",
+    "time" : {
+      "start" : 1644892417126,
+      "stop" : 1644892417126,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "f91edf126f1c2cc",
+      "name" : "log",
+      "source" : "f91edf126f1c2cc.txt",
+      "type" : "text/plain",
+      "size" : 4212
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcases.fund_login"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFundLogin"
+  }, {
+    "name" : "host",
+    "value" : "EM-20210524TVTX"
+  }, {
+    "name" : "thread",
+    "value" : "34092-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.fund_login.test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "caseinfo1",
+    "value" : "{'name': '刘金星天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(ljx1234qwer)}', 'Account': '13636579642'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}"
+  }, {
+    "name" : "caseinfo2",
+    "value" : "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "57bc0539f50d57b.json",
+  "parameterValues" : [ "{'name': '刘金星天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(ljx1234qwer)}', 'Account': '13636579642'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True)'}]}", "{'name': '天天基金用户奖励', 'request': {'params': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}', 'pageIndex': 1, 'pageNum': 100}, 'url': '/getUserRewards', 'method': 'GET', 'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+}

@@ -1,0 +1,11 @@
+name,Account,Password,assert_str1,assert_str2
+张启娣天天基金登录成功用例,15618392885,${md5(zqd1234qwer)},contain(UToken|CToken),equal(Success=True|HasWrongToken=False|ErrorCode=0)
+陈世群天天基金登录成功用例,15800620646,${md5(csq1234qwer)},contain(UToken|CToken),equal(Success=True)
+沈懿天天基金登录成功用例,13166007617,${md5(1234abcd)},contain(UToken|CToken),equal(Success=False)
+车亚梅天天基金登录成功用例,18817391802,${md5(cym1234qwer)},contain(UToken|CToken),equal(Success=True)
+刘金星天天基金登录成功用例,13636579642,${md5(ljx1234qwer)},contain(UToken|CToken),equal(Success=True)
+赵田田天天基金登录成功用例,13761487066,${md5(ztt1234qwer)},contain(UToken|CToken),equal(Success=True)
+李飞天天基金登录成功用例,13621960845,${md5(lf1234qwer)},contain(UToken|CToken),equal(Success=True)
+陈彦彬天天基金登录成功用例,13816580372,${md5(1234qwer)},contain(UToken|CToken),equal(Success=True)
+金鑫天天基金登录成功用例,18017216062,${md5(jx1234qwer)},contain(UToken|CToken),equal(Success=True)
+马龙飞天天基金登录成功用例,18717789585,${md5(mlf1234qwer)},contain(UToken|CToken),equal(Success=True)

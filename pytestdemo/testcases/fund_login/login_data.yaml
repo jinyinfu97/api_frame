@@ -1,0 +1,30 @@
+#基金登录
+-   name: $ddt{name}
+    parameterize:
+      name-Account-Password-assert_str1-assert_str2: /data/fund_login.csv
+    request:
+      headers:
+        Host: tradeapineice.1234567.com.cn
+        Accept: "*/*"
+      data:
+        CToken: ${get_extra_data(Data)}
+        Version: "6.4.8"
+        ServerVersion: "6.4.8"
+        MobileKey: "87C7E8F1-4A80-4045-B0DD-443176FFA5D3"
+        GTOKEN: "A641CBFE4352465485D0447C8D51AFe3"
+        appVersion: "6.4.8"
+        Password: $ddt{Password}
+        Account: $ddt{Account}
+      method: POST
+      url: /LoginCheckForMobile
+
+    extract:
+      CToken: $.Data.CToken
+      UToken: $.Data.UToken
+      CustomerNo: $.Data.CustomerNo
+      CustomerName: $.Data.CustomerName
+      PassportID: $.Data.PassportID
+    validate:
+    - eq: {status_code: 200}
+    - eq: $ddt{assert_str2}
+#    - contain: $ddt{assert_str1}

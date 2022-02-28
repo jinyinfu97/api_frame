@@ -1,0 +1,44 @@
+2021-10-19 14:01:21.356 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: testcase description, TestCase ID: 816d80f1-aa3a-4a3a-95af-8a48a4e8009f
+2021-10-19 14:01:21.359 | INFO     | httprunner.runner:__run_step:292 - run step begin: /cgi-bin/token >>>>>>
+2021-10-19 14:01:21.553 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 53142
+2021-10-19 14:01:21.554 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2021-10-19 14:01:21.555 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://api.weixin.qq.com/cgi-bin/token?appid=wxac9525af0278fe45&grant_type=client_credential&secret=f12e101c5b159d22c60b8a39cf5bf673
+headers  : {
+    "User-Agent": "PostmanRuntime/7.28.4",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Host": "api.weixin.qq.com",
+    "Postman-Token": "b7a29129-f395-479b-b425-c2ff99ca5e41",
+    "HRUN-Request-ID": "HRUN-816d80f1-aa3a-4a3a-95af-8a48a4e8009f-281360"
+}
+cookies  : {}
+body     : None
+
+2021-10-19 14:01:21.556 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json; encoding=utf-8",
+    "Date": "Tue, 19 Oct 2021 06:01:21 GMT",
+    "Content-Length": "194",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json; encoding=utf-8
+body     : {
+    "access_token": "50_fRLosDCA8wK8R8-txTc2VIAZ8zOV2MABG4OIfrR6K8UssqE7kbq0td8rW_Z9NKHVQx4z-XZoa0nTNhCJCox2EmyUB-YVHKokoHRN-93mBcSt7yP1oJWc_gbv1OE6OcwPsiWN5xgyjMn2bomdKANgAJAEUH",
+    "expires_in": 7200
+}
+
+2021-10-19 14:01:21.556 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 193.07 ms, response_length: 0 bytes
+2021-10-19 14:01:21.557 | INFO     | httprunner.response:validate:249 - assert status_code equal 200(int)	==> pass
+2021-10-19 14:01:21.557 | INFO     | httprunner.response:validate:249 - assert headers."Content-Type" equal application/json; encoding=utf-8(str)	==> pass
+2021-10-19 14:01:21.558 | INFO     | httprunner.response:validate:249 - assert body.expires_in equal 7200(int)	==> pass
+2021-10-19 14:01:21.558 | INFO     | httprunner.runner:__run_step:304 - run step end: /cgi-bin/token <<<<<<
+
+2021-10-19 14:01:21.559 | INFO     | httprunner.runner:__run_step:292 - run step begin: /cgi-bin/tags/get >>>>>>

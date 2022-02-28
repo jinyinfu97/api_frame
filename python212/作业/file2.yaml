@@ -1,0 +1,8 @@
+- userinfo:
+    name: hmj
+    password: 1234567
+- city:
+  - 北京2
+  - 上海2
+  - 广东2
+

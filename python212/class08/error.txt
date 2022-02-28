@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "E:/VIP/MS212/python212/class08/python_exception.py", line 98, in <module>
+    1/0
+ZeroDivisionError: division by zero

@@ -1,0 +1,84 @@
+#获取access_token
+config:
+    name: testcase description
+    variables: {}
+    verify: false
+teststeps:
+-   name: /cgi-bin/token
+    request:
+        headers:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: api.weixin.qq.com
+            Postman-Token: b7a29129-f395-479b-b425-c2ff99ca5e41
+            User-Agent: PostmanRuntime/7.28.4
+        method: GET
+        params:
+            appid: wxac9525af0278fe45
+            grant_type: client_credential
+            secret: f12e101c5b159d22c60b8a39cf5bf673
+        url: https://api.weixin.qq.com/cgi-bin/token
+    extract:
+        token: content.access_token
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; encoding=utf-8
+    -   eq:
+        - body.expires_in
+        - 7200
+#查询标签
+-   name: /cgi-bin/tags/get
+    request:
+        headers:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: '2'
+            Content-Type: text/plain
+            Host: api.weixin.qq.com
+            Postman-Token: d5b860cf-5e86-4eca-86cd-39bfd902c09f
+            User-Agent: PostmanRuntime/7.28.4
+        method: GET
+        params:
+            access_token: $token
+        url: https://api.weixin.qq.com/cgi-bin/tags/get
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; encoding=utf-8
+#创建标签
+-   name: /cgi-bin/tags/create
+    request:
+        headers:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: '26'
+            Content-Type: application/json
+            Host: api.weixin.qq.com
+            Postman-Token: 2639cc83-ada2-4a69-b090-e7e995321f87
+            User-Agent: PostmanRuntime/7.28.4
+        json:
+            tag:
+                name: "苏州"
+        method: POST
+        params:
+            access_token: 50_nAlB3-NyrFo6FgGlRqFFK4TjG4fZlQTQGXNSMcivD6MXzW0icTYTHo71Qfna5WUfbogOC6YlUp3k6OgUOmGNUtTLSZaCSOZqS1RF2zXoXy4FWYuC8PmEyQkbq3puD2gTTYiyMndxxSSDA9f2RUZeABAZCH
+        url: https://api.weixin.qq.com/cgi-bin/tags/create
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json; encoding=utf-8
+
+

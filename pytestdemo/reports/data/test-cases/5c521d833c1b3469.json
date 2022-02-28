@@ -1,0 +1,101 @@
+{
+  "uid" : "5c521d833c1b3469",
+  "name" : "test_attend_activity[caseinfo10-caseinfo21]",
+  "fullName" : "testcases.fund_login.test_login.TestFundLogin#test_attend_activity",
+  "historyId" : "b1b591fc83fe203eed624ea41692d5c4",
+  "time" : {
+    "start" : 1644892417584,
+    "stop" : 1644892417812,
+    "duration" : 228
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <pytestdemo.testcases.fund_login.test_login.TestFundLogin object at 0x00000222B136F460>\ncaseinfo1 = {'extract': {'CToken': '$.Data.CToken', 'CustomerName': '$.Data.CustomerName', 'CustomerNo': '$.Data.CustomerNo', 'Pas...ers': {'Accept': '*/*', 'Host': 'tradeapineice.1234567.com.cn'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, ...}\ncaseinfo2 = {'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'activeid': 'A20211210163821', 'ctoken': '${get_extra_data(CToken)}'...72561'}, 'method': 'POST', 'url': '/attendActive'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}\n\n    @pytest.mark.parametrize(\"caseinfo2\", read_testcase_yaml('/testcases/fund_login/attend_activity.yaml'))  # 3个参与接口\n    @pytest.mark.parametrize(\"caseinfo1\", read_testcase_csv('/testcases/fund_login/login_data.yaml'))  # 2个用户\n    def test_attend_activity(self, caseinfo1, caseinfo2):\n        RequestsUtil(Debug_talk(), 'base_login_url').anylasic_testcase(caseinfo1)\n>       RequestsUtil(Debug_talk(), 'base_activity_url').anylasic_testcase(caseinfo2)\n\ntestcases\\fund_login\\test_login.py:30: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ncommon\\requests_util.py:71: in anylasic_testcase\n    self.assert_value(caseinfo['validate'])\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pytestdemo.common.requests_util.RequestsUtil object at 0x00000222B13ADFA0>\nlx = [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]\n\n    def assert_value(self, lx):\n        all_flag = 0\n        for n in lx:\n            for key, value in n.items():\n                if key == 'eq' and 'equal(' not in value:\n                    flag = self.assert_equal(value)\n                    all_flag = all_flag + flag\n                elif key == 'eq' and 'equal(' in value:\n                    flag = self.assert_equal_csv(value)\n                    all_flag = all_flag + flag\n                elif key == 'contain' and 'contain(' in value:\n                    flag = self.assert_contain_csv(value)\n                    all_flag = all_flag + flag\n                elif key == 'contain' and 'contain(' not in value:\n                    flag = self.assert_contain(value)\n                    all_flag = all_flag + flag\n                else:\n                    print('该框架不支持该断言方式！！')\n        # print(all_flag)\n>       assert all_flag == 0\nE       AssertionError\n\ncommon\\requests_util.py:95: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clean_all_data",
+    "time" : {
+      "start" : 1644892417126,
+      "stop" : 1644892417126,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <pytestdemo.testcases.fund_login.test_login.TestFundLogin object at 0x00000222B136F460>\ncaseinfo1 = {'extract': {'CToken': '$.Data.CToken', 'CustomerName': '$.Data.CustomerName', 'CustomerNo': '$.Data.CustomerNo', 'Pas...ers': {'Accept': '*/*', 'Host': 'tradeapineice.1234567.com.cn'}, 'method': 'POST', 'url': '/LoginCheckForMobile'}, ...}\ncaseinfo2 = {'name': '天天基金用户参与活动---拆福袋', 'request': {'data': {'activeid': 'A20211210163821', 'ctoken': '${get_extra_data(CToken)}'...72561'}, 'method': 'POST', 'url': '/attendActive'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}\n\n    @pytest.mark.parametrize(\"caseinfo2\", read_testcase_yaml('/testcases/fund_login/attend_activity.yaml'))  # 3个参与接口\n    @pytest.mark.parametrize(\"caseinfo1\", read_testcase_csv('/testcases/fund_login/login_data.yaml'))  # 2个用户\n    def test_attend_activity(self, caseinfo1, caseinfo2):\n        RequestsUtil(Debug_talk(), 'base_login_url').anylasic_testcase(caseinfo1)\n>       RequestsUtil(Debug_talk(), 'base_activity_url').anylasic_testcase(caseinfo2)\n\ntestcases\\fund_login\\test_login.py:30: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ncommon\\requests_util.py:71: in anylasic_testcase\n    self.assert_value(caseinfo['validate'])\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pytestdemo.common.requests_util.RequestsUtil object at 0x00000222B13ADFA0>\nlx = [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]\n\n    def assert_value(self, lx):\n        all_flag = 0\n        for n in lx:\n            for key, value in n.items():\n                if key == 'eq' and 'equal(' not in value:\n                    flag = self.assert_equal(value)\n                    all_flag = all_flag + flag\n                elif key == 'eq' and 'equal(' in value:\n                    flag = self.assert_equal_csv(value)\n                    all_flag = all_flag + flag\n                elif key == 'contain' and 'contain(' in value:\n                    flag = self.assert_contain_csv(value)\n                    all_flag = all_flag + flag\n                elif key == 'contain' and 'contain(' not in value:\n                    flag = self.assert_contain(value)\n                    all_flag = all_flag + flag\n                else:\n                    print('该框架不支持该断言方式！！')\n        # print(all_flag)\n>       assert all_flag == 0\nE       AssertionError\n\ncommon\\requests_util.py:95: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b3cac7ed08b3884",
+      "name" : "log",
+      "source" : "b3cac7ed08b3884.txt",
+      "type" : "text/plain",
+      "size" : 4232
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcases.fund_login"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFundLogin"
+  }, {
+    "name" : "host",
+    "value" : "EM-20210524TVTX"
+  }, {
+    "name" : "thread",
+    "value" : "34092-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.fund_login.test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "caseinfo1",
+    "value" : "{'name': '张启娣天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(zqd1234qwer)}', 'Account': '15618392885'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True|HasWrongToken=False|ErrorCode=0)'}]}"
+  }, {
+    "name" : "caseinfo2",
+    "value" : "{'name': '天天基金用户参与活动---拆福袋', 'request': {'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}, 'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'method': 'POST', 'url': '/attendActive'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "5c521d833c1b3469.json",
+  "parameterValues" : [ "{'name': '张启娣天天基金登录成功用例', 'parameterize': {'name-Account-Password-assert_str1-assert_str2': '/data/fund_login.csv'}, 'request': {'data': {'CToken': '${get_extra_data(Data)}', 'Version': '6.4.8', 'ServerVersion': '6.4.8', 'MobileKey': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'GTOKEN': 'A641CBFE4352465485D0447C8D51AFe3', 'appVersion': '6.4.8', 'Password': '${md5(zqd1234qwer)}', 'Account': '15618392885'}, 'url': '/LoginCheckForMobile', 'method': 'POST', 'headers': {'Host': 'tradeapineice.1234567.com.cn', 'Accept': '*/*'}}, 'extract': {'CToken': '$.Data.CToken', 'UToken': '$.Data.UToken', 'CustomerNo': '$.Data.CustomerNo', 'CustomerName': '$.Data.CustomerName', 'PassportID': '$.Data.PassportID'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': 'equal(Success=True|HasWrongToken=False|ErrorCode=0)'}]}", "{'name': '天天基金用户参与活动---拆福袋', 'request': {'headers': {'Cookie': 'st_inirUrl=; st_pvi=36971439613168; st_sp=2021-12-21%2010%3A24%3A42; st_si=38503547772561'}, 'data': {'ctoken': '${get_extra_data(CToken)}', 'utoken': '${get_extra_data(UToken)}', 'deviceid': '87C7E8F1-4A80-4045-B0DD-443176FFA5D3', 'taskid': 'T6_20211210045536', 'activeid': 'A20211210163821', 'passportid': '${get_extra_data(PassportID)}', 'userid': '${get_extra_data(CustomerNo)}'}, 'method': 'POST', 'url': '/attendActive'}, 'validate': [{'eq': {'status_code': 200}}, {'eq': {'ErrCode': 0}}]}" ]
+}

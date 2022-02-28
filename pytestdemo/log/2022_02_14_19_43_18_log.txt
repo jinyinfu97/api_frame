@@ -1,0 +1,9 @@
+2022/02/14 19:43:18 | python_logging.py(83 行) | INFO| 请求方式为get
+2022/02/14 19:43:18 | python_logging.py(83 行) | INFO| 完整的请求url为  https://api.weixin.qq.com/cgi-bin/token
+2022/02/14 19:43:18 | python_logging.py(83 行) | INFO| 剩余请求参数为  {'params': {'appid': 'wxac9525af0278fe45', 'secret': 'f12e101c5b159d22c60b8a39cf5bf673', 'grant_type': 'client_credential'}}
+2022/02/14 19:43:19 | python_logging.py(83 行) | INFO| 请求方式为get
+2022/02/14 19:43:19 | python_logging.py(83 行) | INFO| 完整的请求url为  https://api.weixin.qq.com/cgi-bin/token
+2022/02/14 19:43:19 | python_logging.py(83 行) | INFO| 剩余请求参数为  {'params': {'appid': '', 'secret': 'f12e101c5b159d22c60b8a39cf5bf673', 'grant_type': 'client_credential'}}
+2022/02/14 19:43:19 | python_logging.py(83 行) | INFO| 请求方式为get
+2022/02/14 19:43:19 | python_logging.py(83 行) | INFO| 完整的请求url为  https://api.weixin.qq.com/cgi-bin/token
+2022/02/14 19:43:19 | python_logging.py(83 行) | INFO| 剩余请求参数为  {'params': {'appid': 'wxac9525af0278fe45', 'secret': '', 'grant_type': 'client_credential'}}
